@@ -9,7 +9,7 @@ import io.grpc.stub.StreamObserver;
 public class ServidorImpl extends SaludoServiceGrpc.SaludoServiceImplBase {
     @Override
     public void saludo(SaludoRequest request, StreamObserver<SaludoResponse> responseObserver) {
-        SaludoResponse respuesta = SaludoResponse.newBuilder().setResultado("Hola" + request.getNombre()).build();
+        SaludoResponse respuesta = SaludoResponse.newBuilder().setResultado("Hola " + request.getNombre()).build();
         
         responseObserver.onNext(respuesta);
 
