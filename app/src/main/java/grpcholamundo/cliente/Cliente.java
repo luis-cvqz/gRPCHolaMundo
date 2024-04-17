@@ -9,7 +9,7 @@ import io.grpc.ManagedChannelBuilder;
 public class Cliente {
     public static void main(String[] args) {
         String host = "localhost";
-        int puerto = 8080;
+        int puerto = 7887;
 
         ManagedChannel channel = ManagedChannelBuilder.forAddress(host, puerto).usePlaintext().build();
 
